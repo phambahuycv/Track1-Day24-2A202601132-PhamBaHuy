@@ -112,11 +112,11 @@ Track1-Day24-MHV-[MSSV]-[HoVaTen]/
 
 ### Pre-submission Checklist (Rà soát 6 bước trước khi nộp):
 - [x] 1. Khai báo rõ Họ tên, MSSV và Tên dự án (nhóm Build Phase hoặc cá nhân) trong `README.md`.
-- [ ] 2. File Excel đã điền 100% ô màu vàng cả 3 kịch bản tại Tab 1.
-- [ ] 3. Đã đảm bảo `AI Hidden Costs >= 30% API Cost` (không để bằng 0).
-- [ ] 4. Tab 2 Base LTV/CAC > 3.0 và CAC Payback < 12 tháng (tính trên Gross Margin).
-- [ ] 5. Tab 3 khi đổi sang `Pessimistic` đảm bảo Runway ≥ 12 tháng (Cash Position không bị âm).
-- [ ] 6. Viết xong đoạn văn **Decision Note (200–300 từ)** bảo vệ mô hình trong `README.md`.
+- [x] 2. File Excel đã điền 100% ô màu vàng cả 3 kịch bản tại Tab 1.
+- [x] 3. Đã đảm bảo `AI Hidden Costs >= 30% API Cost` (không để bằng 0).
+- [x] 4. Tab 2 Base LTV/CAC > 3.0 và CAC Payback < 12 tháng (tính trên Gross Margin).
+- [x] 5. Tab 3 khi đổi sang `Pessimistic` đảm bảo Runway ≥ 12 tháng (Cash Position không bị âm).
+- [x] 6. Viết xong đoạn văn **Decision Note (200–300 từ)** bảo vệ mô hình trong `README.md`.
 
 ---
 
@@ -137,5 +137,19 @@ Track1-Day24-MHV-[MSSV]-[HoVaTen]/
   * **Phí cố định (Base Subscription):** `149.000 VND / tháng` (bao gồm: Tạo lịch trình AI không giới hạn, 50 lượt hỏi đáp Audio Tour tại các di tích văn hóa).
   * **Phí sử dụng bổ sung (Usage Overage):** `2.000 VND / lượt` truy vấn Audio Guide / RAG thời gian thực vượt hạn mức.
   * **ARPU trung bình kỳ vọng (Base):** `159.000 VND / khách / tháng` (đã gồm Base Subscription + Usage trung bình).
+
+---
+
+### 📊 6. Investor Decision Note (Báo cáo Lập luận & Bảo vệ Mô hình Tài chính)
+
+**1. Căn cứ lựa chọn ARPU & CAC:**
+Mức ARPU kỳ vọng ở kịch bản Base (159.000 VND/tháng) được xây dựng theo mô hình **Hybrid Pricing** (gói cơ bản 149.000 VND + phí overage 2.000 VND/lượt truy vấn mở rộng). Mức giá này chỉ bằng 1/5 chi phí thuê hướng dẫn viên du lịch truyền thống, tạo rào cản chuyển đổi thấp cho tệp khách du lịch tự túc (FIT) nhưng vẫn bảo vệ biên lợi nhuận gộp ở mức an toàn **66.2%**. Mức CAC 320.000 VND được tối ưu hóa thông qua chiến lược Product-Led Growth (cho phép người dùng tạo miễn phí 1 lịch trình đầu tiên) kết hợp kênh liên kết đối tác Homestay/OTA, mang lại tỷ lệ **LTV/CAC đạt 4.11x** (vượt chuẩn vàng 3.0x của VC) và thời gian thu hồi vốn **CAC Payback cực nhanh chỉ 3.04 tháng** (< 12 tháng).
+
+**2. Giải trình cơ cấu Chi phí ẩn (AI Hidden Costs):**
+Nhận thức rõ cạm bẫy chi phí của các sản phẩm GenAI, dự án trích lập **40.000 VND/khách/tháng** cho AI Hidden Costs (chiếm 454.5% chi phí API), phân bổ vào 3 trụ cột: (i) *Data Labeling:* Chuẩn hóa dữ liệu điểm đến, di tích lịch sử và ẩm thực địa phương; (ii) *Model Retraining (~20%/năm):* Cập nhật định kỳ thông tin giá vé, tuyến điểm mới và sự kiện mùa lễ hội; (iii) *Human QA & Guardrails:* Kiểm duyệt thủ công để loại bỏ hoàn toàn hiện tượng "ảo giác" (hallucination) về kiến thức văn hóa và lịch sử.
+
+**3. Đánh giá sức khỏe tài chính & Kế hoạch ứng phó (Plan B):**
+Ở kịch bản Base, dự án tạo ra giá trị bền vững với **NPV dương 301.4 triệu VND** và IRR > 20%. Trong trường hợp thị trường gặp khủng hoảng (kịch bản Pessimistic: Churn tăng vọt lên 15%, CAC đắt đỏ 480.000 VND), quỹ tiền mặt dự trữ 1.2 tỷ VND vẫn đảm bảo **Runway an toàn đạt 15 tháng** (vượt tiêu chuẩn ≥ 12 tháng). Để ứng phó, team kích hoạt **Plan B**: (1) Cắt giảm chi phí cố định (lương và vận hành) từ 75 triệu xuống 35 triệu/tháng; (2) Tối ưu hóa hạ tầng AI bằng cách áp dụng Semantic Caching cho các câu hỏi phổ biến và chuyển các tác vụ đơn giản sang mô hình Small LLM (như GPT-4o-mini / Gemini Flash) để giảm thêm 40% chi phí biến đổi COGS.
+
 
 
